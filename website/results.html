@@ -1,0 +1,59 @@
+<head>
+<link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,700|Roboto:400,700" rel="stylesheet">
+<link href='style.css' rel='stylesheet' type='text/css'>
+<title>Civic IQ Results</title>
+<link rel="icon" type="x-icon" href="icon.png">
+<link rel="shortcut icon" type="x-icon" href="icon.png">
+<meta charset="utf-8">
+<script>
+  version = "Test Edition #1" //Remember to update this before making changes to the test itself!
+</script>
+</head>
+<script type="application/javascript"
+        src="ideologies.js">
+</script>
+<script type="application/javascript"
+        src="questions.js">
+</script>
+
+<body>
+<h1>Civic IQ</h1>
+<hr>
+
+<h1>Results</h1>
+<h2 id="score"></h2>
+<h2>Closest Match: <span class="weight-300" id="ideology-label"></span></h2>
+<p>Ideological matching is a work in progress, and is much less accurate than the values and axes.</p>
+<p>You can send these results by copying and pasting the URL at the top of the page or using the image below. Think your matched ideology was wrong? Want to help us calibrate the test? Send the results along with your political ideology to us at eightvalues@gmail.com, or send us any comments, questions, or criticism. </p>
+<hr/>
+<img src="" id="banner">
+<button class="button" onclick="location.href='index.html';">Back</button> <br>
+<!-- Website visit statistics - no personal information is collected! -->
+<script type="text/javascript">
+var sc_project=11325211;
+var sc_invisible=1;
+var sc_security="fd9f0659";
+var scJsHost = (("https:" == document.location.protocol) ?
+"https://secure." : "http://www.");
+document.write("<sc"+"ript type='text/javascript' src='" +
+scJsHost+
+"statcounter.com/counter/counter.js'></"+"script>");
+</script>
+<script>
+    function getQueryVariable(variable)
+    {
+           var query = window.location.search.substring(1)
+           var vars = query.split("&")
+           for (var i=0;i<vars.length;i++) {
+                   var pair = vars[i].split("=")
+                   if(pair[0] == variable) {return pair[1]}
+           }
+           return(NaN);
+    }
+
+    const score = getQueryVariable('s');
+    const total = questions.length;
+    document.getElementById("score").innerHTML = `You got ${score}/${total} (${Math.round(score/total*100)}%) correct!`
+
+    </script>
+</body>

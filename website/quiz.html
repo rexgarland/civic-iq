@@ -1,0 +1,82 @@
+<head>
+<link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,700|Roboto:400,700" rel="stylesheet">
+<link href='style.css' rel='stylesheet' type='text/css'>
+<title>Civic IQ Quiz</title>
+<link rel="icon" type="x-icon" href="icon.png">
+<link rel="shortcut icon" type="x-icon" href="icon.png">
+<meta charset="utf-8">
+</head>
+<body>
+<script type="application/javascript"
+        src="questions.js">
+</script>
+<h1>Civic IQ</h1>
+<hr>
+<h2 style="text-align:center;" id="question-number">Loading...</h2>
+<p class="question" id="question-text"></p>
+<div id="buttons">
+</div>
+
+<!-- JavaScript for the test itself -->
+<script>
+    let score = 0;
+    var qn = 0; // Question number
+    init_question();
+    
+    function init_question() {
+        const question = questions[qn];
+
+        document.getElementById("question-text").innerHTML = question.text;
+        document.getElementById("question-number").innerHTML = "Question " + (qn + 1) + " of " + (questions.length);
+
+        const buttons = document.getElementById('buttons')
+        buttons.innerHTML = '';
+
+        const selectOption = (option) => () => {
+            if (option === question.answer) {
+                score += 1;
+            }
+            next_question();
+        }
+
+        const options = question.options;
+        for (var i = 0; i < options.length; i++) {
+            const button = document.createElement('button');
+            button.className = 'button';
+            button.innerHTML = options[i];
+            button.onclick = selectOption(options[i]);
+            buttons.append(button);
+            buttons.append(document.createElement('br'))
+        }
+
+        const backButton = document.createElement('button');
+        backButton.className = 'small_button';
+        backButton.id = 'back_button'
+        backButton.onclick = prev_question;
+        backButton.innerHTML = 'Back'
+        buttons.append(backButton);
+
+    }
+
+function next_question() {
+    qn++;
+    if (qn < questions.length) {
+        init_question();
+    } else {
+        results();
+    }
+}
+
+    function prev_question() {
+        if (qn == 0) {
+            return;
+        }
+        qn--;
+        init_question();
+    }
+
+    function results() {
+        location.href = `results.html?s=${score}`
+    }
+</script>
+</body>
