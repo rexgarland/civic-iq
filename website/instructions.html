@@ -1,24 +1,29 @@
 <head>
-<link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,700|Roboto:400,700" rel="stylesheet">
-<link href='style.css' rel='stylesheet' type='text/css'>
-<title>Civic IQ Quiz</title>
-<link rel="icon" type="x-icon" href="icon.png">
-<link rel="shortcut icon" type="x-icon" href="icon.png">
-<meta charset="utf-8">
+  <link
+    href="https://fonts.googleapis.com/css?family=Montserrat:300,400,700|Roboto:400,700"
+    rel="stylesheet"
+  />
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <title>Civic IQ Quiz</title>
+  <link rel="icon" type="x-icon" href="icon.png" />
+  <link rel="shortcut icon" type="x-icon" href="icon.png" />
+  <meta charset="utf-8" />
 </head>
 <body>
-
-<h1>Civic IQ</h1>
-<hr>
-<h2 style="text-align:center;">Instructions</h2>
-<p class="question" id="description"></p>
-<button class="button" onclick="location.href='quiz.html';">Got it!</button> <br>
-<button class="button disagree" onclick="location.href='index.html';">Wait, nevermind!</button> <br>
-
+  <h1>Civic IQ</h1>
+  <hr />
+  <h2 style="text-align: center">Instructions</h2>
+  <p class="question" id="description"></p>
+  <button class="button" onclick="location.href='quiz.html';">Got it!</button>
+  <br />
+  <button class="button disagree" onclick="location.href='index.html';">
+    Wait, nevermind!
+  </button>
+  <br />
 </body>
-<script type="application/javascript"
-        src="questions.js">
-</script>
+<script type="application/javascript" src="questions.js"></script>
 <script>
-    document.getElementById('description').innerHTML = `There are ${questions.length} questions total. Go get em!`;
+  document.getElementById(
+    "description",
+  ).innerHTML = `There are ${questions.length} questions total. Go get em!`;
 </script>
