@@ -8,12 +8,7 @@
   <link rel="icon" type="x-icon" href="icon.png" />
   <link rel="shortcut icon" type="x-icon" href="icon.png" />
   <meta charset="utf-8" />
-  <script>
-    version = "Test Edition #1"; //Remember to update this before making changes to the test itself!
-  </script>
 </head>
-<script type="application/javascript" src="ideologies.js"></script>
-<script type="application/javascript" src="questions.js"></script>
 
 <body>
   <h1>Civic IQ</h1>
@@ -25,42 +20,55 @@
   <img src="" id="banner" />
   <button class="button" onclick="location.href='index.html';">Back</button>
   <br />
-  <!-- Website visit statistics - no personal information is collected! -->
-  <script type="text/javascript">
-    var sc_project = 11325211;
-    var sc_invisible = 1;
-    var sc_security = "fd9f0659";
-    var scJsHost =
-      "https:" == document.location.protocol
-        ? "https://secure."
-        : "http://www.";
-    document.write(
-      "<sc" +
-        "ript type='text/javascript' src='" +
-        scJsHost +
-        "statcounter.com/counter/counter.js'></" +
-        "script>",
-    );
-  </script>
+
+  <script type="application/javascript" src="questions.js"></script>
   <script>
-    function getQueryVariable(variable) {
-      var query = window.location.search.substring(1);
-      var vars = query.split("&");
-      for (var i = 0; i < vars.length; i++) {
-        var pair = vars[i].split("=");
-        if (pair[0] == variable) {
-          return pair[1];
-        }
-      }
-      return NaN;
+    function problem(msg) {
+      alert(`Error: ${msg}\nPlease contact maintainers to fix.`);
     }
 
-    const score = getQueryVariable("s");
+    function getAnswersFromWindowURL() {
+      var url = new URL(window.location);
+      const data = url.searchParams.get("data");
+      if (data === null) {
+        problem("Could not find quiz answers within URL.");
+        return;
+      }
+
+      try {
+        return JSON.parse(atob(data));
+      } catch {
+        problem("Could not parse quiz answers.");
+      }
+    }
+
+    const answers = getAnswersFromWindowURL();
+
     const total = questions.length;
+    if (!answers) {
+      problem("Could not find all answers for calculating quiz results.");
+    }
+    if (answers.length !== total) {
+      problem(`${answers.length} answers found for quiz of length ${total}.`);
+    }
+
+    let score = 0;
+    for (let i = 0; i < questions.length; i++) {
+      const question = questions[i];
+      const correctAnswer = question.answer;
+
+      const chosenIndex = answers[i];
+      const chosenOption = question.options[chosenIndex];
+
+      if (chosenOption === correctAnswer) {
+        score++;
+      }
+    }
+
     document.getElementById(
-      "score",
+      "score"
     ).innerHTML = `You got ${score}/${total} (${Math.round(
-      (score / total) * 100,
+      (score / total) * 100
     )}%) correct!`;
   </script>
 </body>

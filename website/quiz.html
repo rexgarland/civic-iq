@@ -10,16 +10,26 @@
   <meta charset="utf-8" />
 </head>
 <body>
-  <script type="application/javascript" src="questions.js"></script>
   <h1>Civic IQ</h1>
   <hr />
   <h2 style="text-align: center" id="question-number">Loading...</h2>
   <p class="question" id="question-text"></p>
   <div id="buttons"></div>
 
-  <!-- JavaScript for the test itself -->
+  <script type="application/javascript" src="questions.js"></script>
   <script>
-    let score = 0;
+    // https://stackoverflow.com/questions/6122571/simple-non-secure-hash-function-for-javascript
+    function hashCode(str) {
+      let hash = 0;
+      for (let i = 0, len = str.length; i < len; i++) {
+        let chr = str.charCodeAt(i);
+        hash = (hash << 5) - hash + chr;
+        hash |= 0; // Convert to 32bit integer
+      }
+      return hash;
+    }
+
+    const answers = [];
     var qn = 0; // Question number
     init_question();
 
@@ -33,10 +43,8 @@
       const buttons = document.getElementById("buttons");
       buttons.innerHTML = "";
 
-      const selectOption = (option) => () => {
-        if (option === question.answer) {
-          score += 1;
-        }
+      const selectOption = (index) => () => {
+        answers[qn] = index;
         next_question();
       };
 
@@ -45,7 +53,7 @@
         const button = document.createElement("button");
         button.className = "button";
         button.innerHTML = options[i];
-        button.onclick = selectOption(options[i]);
+        button.onclick = selectOption(i);
         buttons.append(button);
         buttons.append(document.createElement("br"));
       }
@@ -68,6 +76,7 @@
     }
 
     function prev_question() {
+      delete answers[qn];
       if (qn == 0) {
         return;
       }
@@ -76,7 +85,14 @@
     }
 
     function results() {
-      location.href = `results.html?s=${score}`;
+      const data = btoa(JSON.stringify(answers));
+      if (data.length > 1500) {
+        alert(
+          "Internal error sending answers to results page. Please contact the maintainer to fix."
+        );
+        return;
+      }
+      location.href = `results.html?data=${data}`;
     }
   </script>
 </body>
