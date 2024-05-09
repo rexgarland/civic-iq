@@ -1,6 +1,6 @@
 # Civic IQ
 
-A small quiz to test your knowledge of modern U.S. civics, aka participation in power. 🇺🇸🇺🇸🇺🇸
+A small quiz to test your knowledge of modern U.S. politics, aka participation in power. 🇺🇸🇺🇸🇺🇸
 
 Play it here: https://rexgarland.github.io/civic-iq/website/
 
