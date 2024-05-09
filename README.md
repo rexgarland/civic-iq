@@ -2,8 +2,6 @@
 
 A small quiz to test your knowledge of modern U.S. politics, aka participation in power. 🇺🇸🇺🇸🇺🇸
 
-Play it here: https://rexgarland.github.io/civic-iq/website/
-
 Code mostly forked from [8values](https://github.com/8values/8values.github.io), into the `website` folder. See `website/LICENSE`.
 
 You win the game by sending me a PR 😉
