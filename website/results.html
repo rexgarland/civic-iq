@@ -16,6 +16,7 @@
 
   <h1>Results</h1>
   <h2 id="score"></h2>
+  <div id="breakdown"></div>
   <hr />
   <button class="button" onclick="location.href='index.html';">Back</button>
   <br />
@@ -41,6 +42,51 @@
       }
     }
 
+    function findMistakes(questions, answers) {
+      const mistakes = [];
+
+      for (let i = 0; i < questions.length; i++) {
+        const question = questions[i];
+        const correctAnswer = question.answer;
+        const chosenIndex = answers[i];
+        const chosenOption = question.options[chosenIndex];
+
+        if (chosenOption !== correctAnswer) {
+          mistakes.push({
+            question,
+            answer: correctAnswer,
+            choice: chosenOption,
+          });
+        }
+      }
+
+      return mistakes;
+    }
+
+    function generateCardFrom(mistake) {
+      const card = document.createElement("div");
+      card.style.marginBottom = "24px";
+      const { question, choice, answer } = mistake;
+      card.innerHTML = `<h3 style="font-size: 18pt; margin-bottom: 12px;">${question.text}</h3><p>You chose "${choice}", when the correct answer was "${answer}".</p>`;
+      return card;
+    }
+
+    function renderMistakeBreakdownIn(div, mistakes) {
+      if (mistakes.length === 0) {
+        return;
+      }
+
+      const header = document.createElement("h2");
+      header.innerHTML = "These questions were incorrect:";
+      div.appendChild(header);
+
+      for (const mistake of mistakes) {
+        div.appendChild(generateCardFrom(mistake));
+      }
+    }
+
+    // main
+
     const answers = getAnswersFromWindowURL();
 
     const total = questions.length;
@@ -51,23 +97,17 @@
       problem(`${answers.length} answers found for quiz of length ${total}.`);
     }
 
-    let score = 0;
-    for (let i = 0; i < questions.length; i++) {
-      const question = questions[i];
-      const correctAnswer = question.answer;
-
-      const chosenIndex = answers[i];
-      const chosenOption = question.options[chosenIndex];
-
-      if (chosenOption === correctAnswer) {
-        score++;
-      }
-    }
+    const mistakes = findMistakes(questions, answers);
+    const score = total - mistakes.length;
 
     document.getElementById(
       "score"
     ).innerHTML = `You got ${score}/${total} (${Math.round(
       (score / total) * 100
     )}%) correct!`;
+
+    const breakdown = document.getElementById("breakdown");
+
+    renderMistakeBreakdownIn(breakdown, mistakes);
   </script>
 </body>

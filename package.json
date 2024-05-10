@@ -7,7 +7,7 @@
   "scripts": {
     "test": "jest",
     "transpile": "babel src -d dist",
-    "build": "yarn transpile && node dist/buildQuestions.js data/questions.md > website/questions.js",
+    "build": "yarn transpile && node dist/main.js data/questions.md > website/questions.js && prettier -w website/questions.js",
     "start": "chokidar src --initial --silent -c \"yarn build && http-server website/\""
   },
   "dependencies": {},
