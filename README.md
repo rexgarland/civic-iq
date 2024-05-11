@@ -15,7 +15,7 @@ yarn start
 
 You can add more questions by simply editing `data/questions.md` and then running `yarn build` to render them into `website/questions.js`.
 
-Here's a simple example:
+Here's a simple example of the syntax:
 
 ```md
 # How many people represent you in Congress?
@@ -25,9 +25,9 @@ Here's a simple example:
 - 535
 ```
 
-Check out that file for more examples. It's also good to include sources when appropriate.
+Check out that file for more examples. It's also good to include sources below the question in code marks.
 
-Also, feel free to add work-in-progress there as well, since it won't be parsed.
+And feel free to add work-in-progress there as well, since it won't be parsed until the question is "staged" by adding the h1 header (`# `).
 
 ## Writing questions
 
