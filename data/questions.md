@@ -38,7 +38,7 @@ Who elects the President? #representation #executive
 - judicial branch
 - [x] House of Representatives
 
-Why was the Electoral College created?
+Why was the Electoral College initially created?
 - [x] The Framers did not trust the popular vote to avoid demagogues.
 
 # Which of these is not a power of the President? #executive
@@ -47,12 +47,6 @@ Why was the Electoral College created?
 - appoint a Supreme Court justice
 - execute laws
 - launch a nuclear weapon
-
-Who is your current Representative?
-- get district based on location
-look up name
-get some random others
-show them as options
 
 # Citizens can access campaign contribution information for free. #elections
 1. [x] True

@@ -14,19 +14,26 @@ You win the game by sending me a PR 😉
 
 `yarn start`
 
-## Adding questions
+## How to add/edit a question
 
-The purpose of each question is to increase the users' likelihood of participating in power (write their rep, make a FOIA request, attend a city hall, court hearings, etc).
+You can add more questions by simply editing `data/questions.md` and then running `yarn build` to render them into `website/questions.js`.
 
-Think questions about elections, where to find public information, how to run for school board, etc.
+Here's a simple example:
 
-Note: we should take care not to exclude certain groups of people based on the phrasing and choice of questions.
+```md
+# How many people represent you in Congress?
+- 1
+- [x] 3
+- 5
+- 535
+```
 
-### Question syntax
+Check out that file for more examples. It's also good to include sources when appropriate.
 
-The question in `data/questions.md` are parsed into a javascript object in `website/questions.js` to be consumed by `website/quiz.html`.
+Also, feel free to add work-in-progress there as well, since it won't be parsed.
 
-The basic format is a header for the question text, a list of options, and a selected option before the correct answer (i.e. `[x]`). Additional details for the question are added in a code block immediately below it (e.g. a source link, explanation, etc). See the file for examples.
+## Writing questions
 
-If a question cannot be parsed, it is simply ignored during the build step.
-This makes it easy to check-in work-in-progress questions, e.g. if they're missing a source.
+The intended purpose of this quiz is to get people more confident to participate in power (e.g. write their rep, make a FOIA request, attend a city hall, etc).
+
+Note: we should be careful not to exclude any protected groups based on phrasing or choice of questions.
