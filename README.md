@@ -6,13 +6,12 @@ Code mostly forked from [8values](https://github.com/8values/8values.github.io),
 
 You win the game by sending me a PR 😉
 
-## Install
-
-`yarn install`
-
 ## Run
 
-`yarn start`
+```
+yarn install
+yarn start
+```
 
 ## How to add/edit a question
 
