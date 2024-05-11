@@ -52,9 +52,13 @@ function findOptions(text) {
 
 function findAnswer(text) {
   const listItems = findListItems(text);
-  for (const listItem of listItems) {
-    if (listItem.startsWith("[x] ")) return listItem.slice(4);
-  }
+  const answers = listItems
+    .filter((listItem) => listItem.startsWith("[x] "))
+    .map((listItem) => listItem.slice(4));
+  if (answers.length > 1)
+    throw new Error("Multiple choice answers are not supported as of yet.");
+
+  return answers[0];
 }
 
 class Question {

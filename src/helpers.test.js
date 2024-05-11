@@ -67,5 +67,14 @@ some explanation
 2. option2`);
       expect(question.options.length).toBe(2);
     });
+
+    it("should throw on multiple answers", () => {
+      const parser = () =>
+        parseQuestion(`# question
+- [x] answer1
+- [x] answer2`);
+
+      expect(parser).toThrow();
+    });
   });
 });

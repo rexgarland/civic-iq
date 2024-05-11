@@ -34,9 +34,9 @@ Who elects the President? #representation #executive
 
 # Which is not a branch of the US government?
 - executive branch
-- [x] bipartisan branch
 - legislative branch
 - judicial branch
+- [x] House of Representatives
 
 Why was the Electoral College created?
 - [x] The Framers did not trust the popular vote to avoid demagogues.
