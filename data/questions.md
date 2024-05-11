@@ -160,13 +160,13 @@ A jury can judge both the facts of a case and the law itself, even in contraduct
 [1] https://www.cbpp.org/research/policy-basics-where-do-our-federal-tax-dollars-go
 ```
 
-# Each $1 billion spent by the government is approximately how much per citizen?
+# Each $1 billion spent by the US government is approximately how much per citizen?
 1. $300
 2. $30
 3. [x] $3
 4. $1
 ```
-The population of the US on Jan. 1, 2024 was approximately 336 million.[1] $1 billion corresponds to about $3 per citizen.
+The population of the US on Jan. 1, 2024 was approximately 336 million. [1]
 [1] https://www.census.gov/library/stories/2023/12/happy-new-year-2024.html
 ```
 
@@ -181,11 +181,12 @@ The President has immunity from certain federal laws.
 The Bill of Rights is:
 - the first 5 ammendments to the Constitution
 
-Certain parts of the Constitution cannot be changed.
-1. True
-2. [x] False
+# Certain parts of the Constitution cannot be changed.
+1. [x] True
+2. False
 ```
-Any part of the Constitution can be changed through the process of Ammendments.
+Article V of the constitution, which describes the process of Ammendments, shields the first clause of Article I, Section 3, from being ammended.[1] This clause provides for the equal representation of states in the Senate. Apart from that, the majority of the Constitution is amenable to change.
+[1] https://en.wikipedia.org/wiki/Article_Five_of_the_United_States_Constitution
 ```
 
 Anyone born in the U.S. is automatically a U.S. citizen. #citizenship
