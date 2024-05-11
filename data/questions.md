@@ -22,15 +22,15 @@ Congress
 President
 popular vote
 
-# How many people in Congress represent you (through elections)? #representation #legislative
+# How many people represent you in Congress? #representation #legislative
 - 1
 - [x] 3
 - 100
-- 435
+- 535
 
 Who elects the President? #representation #executive
 - the citizens, through a direct election
-- the electoral college
+- electors, each representing a state
 
 # Which is not a branch of the US government?
 - executive branch
@@ -174,7 +174,7 @@ States can create laws that overried federal laws.
 1. True
 2. [x] False
 
-The President cannot be found guilty of certain federal laws.
+The President has immunity from certain federal laws.
 1. True
 2. [x] False
 

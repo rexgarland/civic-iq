@@ -33,6 +33,8 @@ And feel free to add work-in-progress there as well, since it won't be parsed un
 
 The intended purpose of this quiz is to get people more confident to participate in power (e.g. write their rep, make a FOIA request, attend a city hall, etc).
 
+The only bias should be toward citizen participation in power, collective or individual. Any bias toward a particular political party / ideology should be avoided, so please help out by reporting it (you can submit an issue or just ping me).
+
 Note: we should be careful not to exclude any protected groups based on phrasing or choice of questions.
 
 ## Acknowledgements
