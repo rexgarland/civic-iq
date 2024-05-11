@@ -185,8 +185,9 @@ The Bill of Rights is:
 1. [x] True
 2. False
 ```
-Article V of the constitution, which describes the process of Ammendments, shields the first clause of Article I, Section 3, from being ammended.[1] This clause provides for the equal representation of states in the Senate. Apart from that, the majority of the Constitution is amenable to change.
+Article V of the constitution, which describes the process of Ammendments, shields the first clause of Article I, Section 3, from being ammended.[1] This clause provides for the equal representation of states in the Senate. Apart from that, the majority of the Constitution is amenable to change. This type of legal shielding is also known as an entrenched clause.[2]
 [1] https://en.wikipedia.org/wiki/Article_Five_of_the_United_States_Constitution
+[2] https://en.wikipedia.org/wiki/Entrenched_clause
 ```
 
 Anyone born in the U.S. is automatically a U.S. citizen. #citizenship

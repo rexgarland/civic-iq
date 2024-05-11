@@ -1,18 +1,18 @@
 questions = [
   {
-    text: "How many people in Congress represent you (through elections)?",
-    options: ["1", "3", "100", "435"],
+    text: "How many people represent you in Congress?",
+    options: ["1", "3", "100", "535"],
     answer: "3",
   },
   {
     text: "Which is not a branch of the US government?",
     options: [
       "executive branch",
-      "bipartisan branch",
       "legislative branch",
       "judicial branch",
+      "House of Representatives",
     ],
-    answer: "bipartisan branch",
+    answer: "House of Representatives",
   },
   {
     text: "Which of these is not a power of the President?",
@@ -46,9 +46,14 @@ questions = [
     answer: "wellfare programs",
   },
   {
-    text: "Each $1 billion spent by the government is approximately how much per citizen?",
+    text: "Each $1 billion spent by the US government is approximately how much per citizen?",
     options: ["$300", "$30", "$3", "$1"],
     answer: "$3",
+  },
+  {
+    text: "Certain parts of the Constitution cannot be changed.",
+    options: ["True", "False"],
+    answer: "True",
   },
   {
     text: "The median amount of time it takes for a legally permanent resident (LPR) to become a naturalized citizen is:",
