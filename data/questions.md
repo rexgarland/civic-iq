@@ -34,7 +34,7 @@ Who elects the President? #representation #executive
 
 # Which is not a branch of the US government?
 - executive branch
-- bipartisan branch
+- [x] bipartisan branch
 - legislative branch
 - judicial branch
 

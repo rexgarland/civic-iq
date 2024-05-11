@@ -12,6 +12,7 @@ questions = [
       "legislative branch",
       "judicial branch",
     ],
+    answer: "bipartisan branch",
   },
   {
     text: "Which of these is not a power of the President?",

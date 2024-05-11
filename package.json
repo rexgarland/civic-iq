@@ -5,8 +5,8 @@
   "author": "Rex Garland <rex@rexgarland.dev>",
   "license": "MIT",
   "scripts": {
-    "test": "jest",
     "transpile": "babel src -d dist",
+    "test": "yarn transpile && jest dist",
     "build": "yarn transpile && node dist/main.js data/questions.md > website/questions.js && prettier -w website/questions.js",
     "start": "chokidar src --initial --silent -c \"yarn build && http-server website/\""
   },
