@@ -1,10 +1,6 @@
 # Civic IQ
 
-A small quiz to test your knowledge of modern U.S. politics, aka participation in power. 🇺🇸🇺🇸🇺🇸
-
-Code mostly forked from [8values](https://github.com/8values/8values.github.io), into the `website` folder. See `website/LICENSE`.
-
-You win the game by sending me a PR 😉
+A small quiz to test your knowledge of modern U.S. politics, a.k.a. participation in power. We the people! 🇺🇸🇺🇸🇺🇸
 
 ## Run
 
@@ -36,3 +32,7 @@ Also, feel free to add work-in-progress there as well, since it won't be parsed.
 The intended purpose of this quiz is to get people more confident to participate in power (e.g. write their rep, make a FOIA request, attend a city hall, etc).
 
 Note: we should be careful not to exclude any protected groups based on phrasing or choice of questions.
+
+## Acknowledgements
+
+- The `website` folder started as a clone of [8values](https://github.com/8values/8values.github.io). A big thank you to them for writing such readable code, with essentially no setup needed. See `website/LICENSE`.
