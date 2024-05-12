@@ -2,7 +2,7 @@
 
 A small quiz to test your knowledge of modern U.S. politics, a.k.a. participation in power. We the people! 🇺🇸🇺🇸🇺🇸
 
-[Take the quiz!](https://rexgarland.github.io/civic-iq/website/)
+[Take the quiz!](https://rexgarland.github.io/civic-iq)
 
 ## Run
 
