@@ -21,9 +21,8 @@
   </button>
   <br />
 </body>
-<script type="application/javascript" src="questions.js"></script>
-<script>
-  document.getElementById(
-    "description",
-  ).innerHTML = `There are ${questions.length} questions total. Go get em!`;
+<script type="module">
+  import { questions } from "./questions.js";
+  document.getElementById("description").innerHTML =
+    `There are ${questions.length} questions total. Go get em!`;
 </script>

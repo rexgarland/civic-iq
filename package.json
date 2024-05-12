@@ -5,10 +5,11 @@
   "author": "Rex Garland <rex@rexgarland.dev>",
   "license": "MIT",
   "scripts": {
-    "transpile": "babel src -d dist",
-    "test": "yarn transpile && jest dist",
-    "build": "yarn transpile && node dist/main.js data/questions.md > website/questions.js && prettier -w website/questions.js",
-    "start": "chokidar src --initial --silent -c \"yarn build && http-server website/\""
+    "clean": "rm -rf dist/*",
+    "transpile": "yarn clean && babel src -d dist",
+    "test": "jest src",
+    "build": "yarn transpile && node dist/main.js data/questions.md > dist/questions.js && cp public/* dist",
+    "start": "chokidar src --initial --silent -c \"yarn build && http-server dist/\""
   },
   "dependencies": {},
   "devDependencies": {
@@ -18,7 +19,6 @@
     "babel-jest": "^29.7.0",
     "chokidar-cli": "3.0.0",
     "http-server": "14.1.1",
-    "jest": "29.7.0",
-    "prettier": "3.2.5"
+    "jest": "29.7.0"
   }
 }

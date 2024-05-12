@@ -1,3 +1,5 @@
+import { Question } from "./Question.js";
+
 function splitTextByDoubleNewlines(text) {
   return text.split("\n\n").map((t) => t.trim());
 }
@@ -59,14 +61,6 @@ function findAnswer(text) {
     throw new Error("Multiple choice answers are not supported as of yet.");
 
   return answers[0];
-}
-
-class Question {
-  constructor(text, options, answer) {
-    this.text = text;
-    this.options = options;
-    this.answer = answer;
-  }
 }
 
 export function parseQuestion(data) {

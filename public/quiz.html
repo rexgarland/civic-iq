@@ -16,8 +16,9 @@
   <p class="question" id="question-text"></p>
   <div id="buttons"></div>
 
-  <script type="application/javascript" src="questions.js"></script>
-  <script>
+  <script type="module">
+    import { questions } from "./questions.js";
+
     // https://stackoverflow.com/questions/6122571/simple-non-secure-hash-function-for-javascript
     function hashCode(str) {
       let hash = 0;
@@ -31,11 +32,9 @@
 
     const answers = [];
     var qn = 0; // Question number
-    init_question();
+    init_question(questions[qn]);
 
-    function init_question() {
-      const question = questions[qn];
-
+    function init_question(question) {
       document.getElementById("question-text").innerHTML = question.text;
       document.getElementById("question-number").innerHTML =
         "Question " + (qn + 1) + " of " + questions.length;
@@ -69,7 +68,7 @@
     function next_question() {
       qn++;
       if (qn < questions.length) {
-        init_question();
+        init_question(questions[qn]);
       } else {
         results();
       }
@@ -81,7 +80,7 @@
         return;
       }
       qn--;
-      init_question();
+      init_question(questions[qn]);
     }
 
     function results() {

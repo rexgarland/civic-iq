@@ -8,12 +8,12 @@ A small quiz to test your knowledge of modern U.S. politics, a.k.a. participatio
 
 ```
 yarn install
-yarn start
+yarn start # watches, builds and serves static files
 ```
 
 ## How to add/edit a question
 
-You can add more questions by simply editing `data/questions.md` and then running `yarn build` to render them into `website/questions.js`.
+You can add more questions by simply editing `data/questions.md` and then running `yarn build` to render the site.
 
 Here's a simple example of the syntax:
 
@@ -39,5 +39,5 @@ Note: we should be careful not to exclude any protected groups based on phrasing
 
 ## Acknowledgements
 
-- The `website` folder started as a clone of [8values](https://github.com/8values/8values.github.io). A big thank you to them for writing such readable code, with essentially no setup needed. See `website/LICENSE`.
+- The `public` folder started as a clone of [8values](https://github.com/8values/8values.github.io). A big thank you to them for writing such readable code, with essentially no setup needed. See `public/LICENSE`.
 - A special thanks to all the great resources provided by `chaserx` in [awesome-citizen](https://github.com/chaserx/awesome-citizen)
