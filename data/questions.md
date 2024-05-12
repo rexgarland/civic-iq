@@ -185,7 +185,7 @@ The Bill of Rights is:
 1. [x] True
 2. False
 ```
-Article V of the constitution, which describes the process of Ammendments, shields the first clause of Article I, Section 3, from being ammended.[1] This clause provides for the equal representation of states in the Senate. Apart from that, the majority of the Constitution is amenable to change. This type of legal shielding is also known as an entrenched clause.[2]
+Article V of the Constitution, which describes the process of Ammendments, shields the first clause of Article I, Section 3, from being ammended.[1] This clause provides for the equal representation of states in the Senate. Apart from that, the majority of the Constitution is amenable to change. This type of legal shielding is also known as an entrenched clause.[2]
 [1] https://en.wikipedia.org/wiki/Article_Five_of_the_United_States_Constitution
 [2] https://en.wikipedia.org/wiki/Entrenched_clause
 ```
@@ -228,7 +228,7 @@ The usual difference between a sheriff and a police chief is:
 [1] https://en.wikipedia.org/wiki/Chief_of_police
 ```
 
-A House representative represents no more than ________ citizens.
+House congressional districts may represent no more than ________ citizens.
 - [x] 750,000
 
 # The majority of Americans believe the federal government "responds to the needs of ordinary Americans." #representation
@@ -253,12 +253,11 @@ Deficit financing is
 [1] https://www.britannica.com/money/deficit-financing
 ```
 
-What is the rule of law?
-- [x] a political situation in which no citizen above the law, including lawmakers
-- the public records of all laws created by a sovereign nation
-- the power given to an institution to adjudicate laws, specifically through courts
-- the right of every citizen to a public trial, in the event that they are accused of a crime
-- a section of the constitution which specifies the administration of justice
+# What is the "rule of law"?
+- [x] a political situation in which no citizen above the law, including lawmakers themselves
+- power given to the courts to adjudicate disputes according to the law
+- the right of every citizen to a public trial in a court of law
+- the first 5 ammendments to the Constitution, which specify the administration of justice
 ```
 [1] https://en.wikipedia.org/wiki/Rule_of_law
 ```
