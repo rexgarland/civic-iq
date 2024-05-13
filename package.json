@@ -9,7 +9,7 @@
     "transpile": "yarn clean && babel src -d dist",
     "test": "jest src",
     "build": "yarn transpile && node dist/main.js data/questions.md > dist/questions.js && cp public/* dist",
-    "start": "chokidar src --initial --silent -c \"yarn build && http-server dist/\""
+    "start": "chokidar src public --initial --silent -c \"yarn build && http-server dist/\""
   },
   "dependencies": {},
   "devDependencies": {
