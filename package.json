@@ -8,7 +8,7 @@
     "clean": "rm -rf dist/*",
     "transpile": "yarn clean && babel src -d dist",
     "test": "jest src",
-    "build": "yarn transpile && node dist/main.js data/questions.md > dist/questions.js && cp public/* dist",
+    "build": "yarn transpile && node dist/main.js data/questions.md > dist/questions.js && cp public/* dist && cp src/render.js dist",
     "start": "chokidar src public --initial --silent -c \"yarn build && http-server dist/\""
   },
   "dependencies": {},

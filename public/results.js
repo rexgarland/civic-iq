@@ -1,4 +1,5 @@
 import { questions } from "./questions.js";
+import { renderMistake } from "./render.js";
 
 function problem(msg) {
   alert(`Error: ${msg}\nPlease contact maintainers to fix.`);
@@ -38,11 +39,6 @@ function findMistakes(questions, answers) {
   return mistakes;
 }
 
-function renderMistake(mistake) {
-  const { question, choice } = mistake;
-  return `<div style="margin-bottom: 24px;"><h3 style="font-size: 18pt; margin-bottom: 12px;">${question.text}</h3><p>You chose "${choice}", when the correct answer was "${question.answer}".</p></div>`;
-}
-
 function renderMistakeBreakdownIn(div, mistakes) {
   if (mistakes.length === 0) {
     return;
@@ -72,8 +68,11 @@ if (answers.length !== total) {
 const mistakes = findMistakes(questions, answers);
 const score = total - mistakes.length;
 
-document.getElementById("score").innerHTML =
-  `You got ${score}/${total} (${Math.round((score / total) * 100)}%) correct!`;
+document.getElementById(
+  "score"
+).innerHTML = `You got ${score}/${total} (${Math.round(
+  (score / total) * 100
+)}%) correct!`;
 
 const breakdown = document.getElementById("breakdown");
 
