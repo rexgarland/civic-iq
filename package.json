@@ -5,10 +5,10 @@
   "author": "Rex Garland <rex@rexgarland.dev>",
   "license": "MIT",
   "scripts": {
-    "clean": "rm -rf dist/*",
-    "transpile": "yarn clean && babel src -d dist",
+    "clean": "rm -rf dist/* lib/*",
+    "transpile": "yarn clean && babel src -d lib",
     "test": "jest src",
-    "build": "yarn transpile && node dist/main.js data/questions.md > dist/questions.js && cp public/* dist && cp src/render.js dist",
+    "build": "yarn transpile && node lib/main.js data/questions.md > dist/questions.js && cp public/* dist && cp src/render.js dist",
     "start": "chokidar src public --initial --silent -c \"yarn build && http-server dist/\""
   },
   "dependencies": {},
