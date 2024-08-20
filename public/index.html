@@ -90,9 +90,8 @@
     questions in the quiz.
   </p>
 
-  <!-- This is the script for the page itself -->
-  <script type="application/javascript" src="questions.js"></script>
-  <script type="text/javascript">
+  <script type="module">
+    import { questions } from "./questions.js";
     document.getElementById("numOfQuestions").innerHTML = questions.length;
   </script>
 </body>
